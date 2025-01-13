@@ -15,11 +15,10 @@ def test_pelicula_mas_ganancias(pelis, genero=None):
     
 def test_media_presupuesto_por_genero(pelis):
     print('Test de media_presupuesto_por_genero:')
-    
     print(media_presupuesto_por_genero(pelis))
+    
 def test_peliculas_por_actor(pelis, año_inicial=None, año_final=None):
     print(f'Test de peliculas_por_actor (año_inicial={año_inicial}, año_final={año_final}):')
-    
     peliculas = peliculas_por_actor(pelis, año_inicial, año_final)
     
     for actor in ['Robert Downey Jr.', 'Christian Bale', 'Adam Driver']:
@@ -41,11 +40,11 @@ if __name__ == '__main__':
     pelis = test_lee_peliculas('data/peliculas.csv')
     test_pelicula_mas_ganancias(pelis)
     test_pelicula_mas_ganancias(pelis, genero='Drama')
-    #test_media_presupuesto_por_genero(pelis)
+    test_media_presupuesto_por_genero(pelis)
     #test_peliculas_por_actor(pelis)
-    #test_peliculas_por_actor(pelis, año_inicial=2010, año_final=2020)
-    #test_actores_mas_frecuentes(pelis, n=3, año_inicial=2005, año_final=2015)
+    #test_peliculas_por_actor(pelis, 2010, 2020)
+    #test_actores_mas_frecuentes(pelis, 3, 2005, 2015)
     #test_recaudacion_total_por_año(pelis)
-    #test_recaudacion_total_por_año(pelis, generos={'Drama', 'Acción'})
+    #test_recaudacion_total_por_año(pelis, {'Drama', 'Acción'})
     #test_incrementos_recaudacion_por_año(pelis)
-    #test_incrementos_recaudacion_por_año(pelis, generos={'Drama', 'Acción'})
+    #test_incrementos_recaudacion_por_año(pelis, {'Drama', 'Acción'})
